@@ -29,4 +29,4 @@ sort_dictionary(repetition_count("sussus amogus"))
 def print_dict_list(list):
     for dict in list:
         if dict["name"].isalpha():
-            print(f"{dict["name"]} : {dict["num"]}")
+            print(f"{dict["name"]}: {dict["num"]}")
