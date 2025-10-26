@@ -13,4 +13,20 @@ def repetition_count(book_strig):
     return letter_dictionary
 
 
+def sort_dictionary(dictionary):
+    def sort_on_helper(items):
+        return items["num"]
+    dic_list=[]
+    for item  in dictionary:
+        dic_list.append({"name":item,"num":dictionary[item]})
+    
+        
+    dic_list.sort(reverse=True,key=sort_on_helper)
+    return dic_list
 
+sort_dictionary(repetition_count("sussus amogus"))
+
+def print_dict_list(list):
+    for dict in list:
+        if dict["name"].isalpha():
+            print(f"{dict["name"]} : {dict["num"]}")

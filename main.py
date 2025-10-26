@@ -1,16 +1,29 @@
 from stats import word_count
 from stats import repetition_count
+from stats import sort_dictionary
+from stats import print_dict_list
 def main():
-    letter_count = repetition_count(get_book_text())
-    word_num = word_count(get_book_text())
+    print_report()
+
+
+def print_report():
+    book = "./books/frankenstein.txt"
+    content = get_book_text(book)
+    word_num = word_count(content)
+    character_count = repetition_count(content)
+    sorted_character_count=sort_dictionary(character_count)
+    print("============ BOOKBOT ============")
+    print(f"Analyzing book found at {book}")
+    print("----------- Word Count ----------")
     print(f"Found {word_num} total words")
-    print(f"and this is the lettter count: {letter_count}")
+    print(f"--------- Character Count -------")
+    print_dict_list(sorted_character_count)
+    print("============= END ===============")
+    
+    
+def get_book_text(book):
 
-
-
-def get_book_text():
-
-    with open("./books/frankenstein.txt") as f:
+    with open(book) as f:
         frankenstein=f.read()
     return frankenstein
 
