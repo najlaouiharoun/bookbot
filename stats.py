@@ -8,6 +8,7 @@ def repetition_count(book_strig):
     for letter in lowercase_book_string:
         if letter in letter_dictionary:
             letter_dictionary[letter]+=1
+            continue
         else:
             letter_dictionary[letter]=1
     return letter_dictionary
@@ -24,7 +25,6 @@ def sort_dictionary(dictionary):
     dic_list.sort(reverse=True,key=sort_on_helper)
     return dic_list
 
-sort_dictionary(repetition_count("sussus amogus"))
 
 def print_dict_list(list):
     for dict in list:
