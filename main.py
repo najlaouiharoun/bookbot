@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+
+
 import sys
 from stats import word_count
 from stats import repetition_count
